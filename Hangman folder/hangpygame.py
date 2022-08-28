@@ -6,7 +6,6 @@ mainClock = pygame.time.Clock()
 pygame.init()
 pygame.display.set_caption('hangman')
 screen = pygame.display.set_mode((1000,600),0,32)
-offset = [0,0]
 clicking = False
 clicking2 = False
 right_clicking = False
@@ -18,7 +17,7 @@ font = pygame.font.Font(None, 32)
 with open('words_to_use.txt','r') as f:
     mylist = [line.rstrip() for line in f]
     chosen_word = random.choice(mylist)
-print(chosen_word,end='')
+
 click2 = False
 text = ''
 pygame.font.init() 
@@ -54,7 +53,6 @@ class Word_button():
         screen.blit(textsurface,(370,350))
 
 
-        print(Word_button.displaystr)
         return True
 
 class CreateButton():
@@ -65,17 +63,12 @@ class CreateButton():
         self.btntexts = None
         self.display = display_word
         self.letters = None
-        self.btn1 = None
         self.color = color
 
-    def drawButton(self,letter, posX,posY, btn_W, btn_H, color, radius, shadow_color='grey'):
+    def drawButton(self,letter, posX,posY, btn_W, btn_H, color, radius):
        pos = pygame.mouse.get_pos() 
        action = False
-      # if shadow:
        self.btn = pygame.draw.rect(self.surface,color,(posX,posY, btn_W, btn_H),border_radius=radius)
-    #    else:
-    #        self.btn = pygame.draw.rect(self.surface, color, (posX,posY, btn_W, btn_H),border_radius=radius)
-
        self.letters = letter
        
        if self.btn.collidepoint(pos) and self.clicked == False:
@@ -88,21 +81,6 @@ class CreateButton():
 
         self.btntexts = btntext
         ptext.draw(btntext,center=self.btn.center,color=tcolor,sysfontname=font,fontsize=size,shadow=shadow,scolor=scolor)
-    
-
-    # def HoverButton(self,event):
-    #     mx,my = pygame.mouse.get_pos()
-    #     # font = 'Comic Sans MS'
-    #     # tcolor = 'black'
-    #     # size = 20
-    #     if event.type == pygame.MOUSEMOTION:
-            
-    #         if self.btn.collidepoint((mx,my)):
-    #             print('true')
-    #             self.color = (169,28,23)
-    #         else:
-    #             self.color = color
-        
         
     def comparison_word(self):
         letter_click = self.btntexts
@@ -129,31 +107,19 @@ posY1 = 235
 yes_btnH = 40
 yes_btnW = 40
 color = 'lightskyblue3'
-comparison_letters_fail = []
+
 
 
 def removes(string):
     return string.replace(" ", "")
 
-# def redraw_window():
-#         screen.fill((255, 255, 255))
-        
-#        # screen.blit(man[0], (20, 100))
-#         # DRAWS LETTER BUTTONS
-#         for letter in comparison_letters_fail:
-#             letter.drawButton(screen, (0, 0, 0))
-#         pygame.display.update()
 run = True
 screen.fill((255,255,255))   
 mouseOver = False
 victory = False
 defeat = False
 while run:
-   # redraw_window()
     mx,my = pygame.mouse.get_pos()
-    # consider other options 
-    rot = 0
-    loc = [mx,my]
     button_set = Word_button(screen,display)
     button_set_1 = button_set.create_word_button()
     if button_set_1.collidepoint((mx,my)):
@@ -165,10 +131,7 @@ while run:
         
     pygame.draw.rect(screen, (255,0,0), button_set_1)
 
-    posXinc = 0
-    posXinc1 = 0
-    posYinc = 0
-    alphabet = list("abcdefghijklmnopqrstuvwxyz")
+  
     a_button = CreateButton(screen,display)
     a_button.drawButton('a',posX,posY,yes_btnW,yes_btnH,color,5)
     a_button.textButton('a', 'black', 'Comic Sans MS', 20, (0,0))
@@ -324,26 +287,6 @@ while run:
     z_button.textButton('z', 'black', 'Comic Sans MS', 20, (0,0))
     z_button.comparison_word()
 
-    
-    # for i in range(13):
-    #      letter_1 = CreateButton(screen,display)
-    #      comparison_letters_fail.append(letter_1)
-    #      letter_1.drawButton(alphabet[i],posX+posXinc,posY,yes_btnW,yes_btnH,color,10,35)
-    #      letter_1.textButton(alphabet[i], 'black', 'Comic Sans MS', 20, (0,0))
-    #      posXinc += 60
-    # for i in range(13,26):
-    #     letter_2 = CreateButton(screen,display)
-    #     comparison_letters_fail.append(letter_2)
-    #     letter_2.drawButton(alphabet[i],posX+posXinc1,posY1,yes_btnW,yes_btnH,color,10,35)
-    #     letter_2.textButton(alphabet[i], 'black', 'Comic Sans MS', 20, (0,0))
-    #     posXinc1 += 60
-        
-
-    # for letter in comparison_letters_fail:
-    #     letter.comparison_word()
- 
-        #screen.fill((255,255,255)) 
-    
 
     events = pygame.event.get()
     
@@ -358,121 +301,89 @@ while run:
                 clicking = True
                 if drawn == True:
                     clicking2 = True
-
-                print(clicking)
+                    
                 if a_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-   
-                     print(lives)
 
                 elif b_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+
                 elif c_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+
                 elif d_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+     
                 elif e_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+             
                 elif f_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                    
                 elif g_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                 
                 elif h_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                   
                 elif i_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                   
                 elif j_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                
                 elif k_button.comparison_word2() == False:
                     lives -= 1
-                    lives11 += 1
-                    print(lives)
+                 
                 elif l_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                    
                 elif m_button.comparison_word2() == False:
                       lives -= 1
-                      lives11 += 1
-                      print(lives)
+                      
                 elif n_button.comparison_word2() == False:
                     lives -= 1
-                    lives11 += 1
-                    print(lives)
+                 
                 elif o_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                 
                 elif p_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                   
                 elif q_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                
                 elif r_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                   
                 elif s_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                    
                 elif t_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                 
                 elif u_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+               
                 elif v_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                  
                 elif w_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+               
                 elif x_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                  
                 elif y_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
+                  
                 elif z_button.comparison_word2() == False:
                      lives -= 1
-                     lives11 += 1
-                     print(lives)
-                
+          
             if event.button == 2:
                 middle_clicking = True
-                rot += 90
             if event.button == 3:
                 right_clicking = True
-                rot += 180
         if event.type == pygame.MOUSEBUTTONUP:
             if event.button == 1:
                 clicking = False
@@ -482,7 +393,6 @@ while run:
             if event.button == 3:
                 right_clicking = False
        
-
 
     lives_str = str(lives)
     live_surface = myfont.render(f'Lives: {lives_str}',False,(0,0,0))
@@ -515,7 +425,6 @@ while run:
             defeat_text = myfont.render('You lose', False, (0,0,0))
             screen.blit(defeat_text,(430,300))
             lives = 10
-            
             display = []
             displaystrs = ''
             with open('words_to_use.txt','r') as f:
@@ -528,7 +437,3 @@ while run:
     pygame.display.update()
 
     mainClock.tick(60)
-
-
-
-#(Maybe) 3. Change color when hovering, use the other guy for improvement and reduce ego
