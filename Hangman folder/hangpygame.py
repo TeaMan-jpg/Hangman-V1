@@ -104,8 +104,8 @@ lives11 = 1
 posX = 220
 posY = 35
 posY1 = 235
-yes_btnH = 40
-yes_btnW = 40
+letter_btnH = 40
+letter_btnW = 40
 color = 'lightskyblue3'
 
 
@@ -133,91 +133,91 @@ while run:
 
   
     a_button = CreateButton(screen,display)
-    a_button.drawButton('a',posX,posY,yes_btnW,yes_btnH,color,5)
+    a_button.drawButton('a',posX,posY,letter_btnW,letter_btnH,color,5)
     a_button.textButton('a', 'black', 'Comic Sans MS', 20, (0,0))
     a_button.comparison_word()
     
 
     b_button = CreateButton(screen,display)
-    b_button.drawButton('b',posX+100,posY,yes_btnW,yes_btnH,color,5)
+    b_button.drawButton('b',posX+100,posY,letter_btnW,letter_btnH,color,5)
     b_button.textButton('b', 'black', 'Comic Sans MS', 20, (0,0))
     b_button.comparison_word()
         
 
     c_button = CreateButton(screen,display)
-    c_button.drawButton('c',posX+200,posY,yes_btnW,yes_btnH,color,10)
+    c_button.drawButton('c',posX+200,posY,letter_btnW,letter_btnH,color,10)
     c_button.textButton('c', 'black', 'Comic Sans MS', 20, (0,0))
     c_button.comparison_word()
         
     
     d_button = CreateButton(screen,display)
-    d_button.drawButton('d',posX+300,posY,yes_btnW,yes_btnH,color,10)
+    d_button.drawButton('d',posX+300,posY,letter_btnW,letter_btnH,color,10)
     d_button.textButton('d', 'black', 'Comic Sans MS', 20, (0,0))
     d_button.comparison_word()
         
 
     e_button = CreateButton(screen,display)
-    e_button.drawButton('e',posX+400,posY,yes_btnW,yes_btnH,color,10)
+    e_button.drawButton('e',posX+400,posY,letter_btnW,letter_btnH,color,10)
     e_button.textButton('e', 'black', 'Comic Sans MS', 20, (0,0))
     e_button.comparison_word()
         
 
     f_button = CreateButton(screen,display)
-    f_button.drawButton('f',posX+500,posY,yes_btnW,yes_btnH,color,10)
+    f_button.drawButton('f',posX+500,posY,letter_btnW,letter_btnH,color,10)
     f_button.textButton('f', 'black', 'Comic Sans MS', 20, (0,0))
     f_button.comparison_word()
         
 
     g_button = CreateButton(screen,display)
-    g_button.drawButton('g',posX,posY+50,yes_btnW,yes_btnH,color,10)
+    g_button.drawButton('g',posX,posY+50,letter_btnW,letter_btnH,color,10)
     g_button.textButton('g', 'black', 'Comic Sans MS', 20, (0,0))
     g_button.comparison_word()
         
 
     h_button = CreateButton(screen,display)
-    h_button.drawButton('h',posX+100,posY+50,yes_btnW,yes_btnH,color,10)
+    h_button.drawButton('h',posX+100,posY+50,letter_btnW,letter_btnH,color,10)
     h_button.textButton('h', 'black', 'Comic Sans MS', 20, (0,0))
     h_button.comparison_word()
         
 
     i_button = CreateButton(screen,display)
-    i_button.drawButton('i',posX+200,posY+50,yes_btnW,yes_btnH,color,10)
+    i_button.drawButton('i',posX+200,posY+50,letter_btnW,letter_btnH,color,10)
     i_button.textButton('i', 'black', 'Comic Sans MS', 20, (0,0))
     i_button.comparison_word()
         
 
     j_button = CreateButton(screen,display)
-    j_button.drawButton('j',posX+300,posY+50,yes_btnW,yes_btnH,color,10)
+    j_button.drawButton('j',posX+300,posY+50,letter_btnW,letter_btnH,color,10)
     j_button.textButton('j', 'black', 'Comic Sans MS', 20, (0,0))
     j_button.comparison_word()
         
 
     k_button = CreateButton(screen,display)
-    k_button.drawButton('k',posX+400,posY+50,yes_btnW,yes_btnH,color,10)
+    k_button.drawButton('k',posX+400,posY+50,letter_btnW,letter_btnH,color,10)
     k_button.textButton('k', 'black', 'Comic Sans MS', 20, (0,0))
     k_button.comparison_word()
         
 
     l_button = CreateButton(screen,display)
-    l_button.drawButton('l',posX+500,posY+50,yes_btnW,yes_btnH,color,10)
+    l_button.drawButton('l',posX+500,posY+50,letter_btnW,letter_btnH,color,10)
     l_button.textButton('l', 'black', 'Comic Sans MS', 20, (0,0))
     l_button.comparison_word()
         
 
     m_button = CreateButton(screen,display)
-    m_button.drawButton('m',posX,posY+100,yes_btnW,yes_btnH,color,10)
+    m_button.drawButton('m',posX,posY+100,letter_btnW,letter_btnH,color,10)
     m_button.textButton('m', 'black', 'Comic Sans MS', 20, (0,0))
     m_button.comparison_word()
     
 
     n_button = CreateButton(screen,display)
-    n_button.drawButton('n',posX+100,posY+100,yes_btnW,yes_btnH,color,10)
+    n_button.drawButton('n',posX+100,posY+100,letter_btnW,letter_btnH,color,10)
     n_button.textButton('n', 'black', 'Comic Sans MS', 20, (0,0))
     n_button.comparison_word()
         
 
     o_button = CreateButton(screen,display)
-    o_button.drawButton('o',posX+200,posY+100,yes_btnW,yes_btnH,color,10)
+    o_button.drawButton('o',posX+200,posY+100,letter_btnW,letter_btnH,color,10)
     o_button.textButton('o', 'black', 'Comic Sans MS', 20, (0,0))
     o_button.comparison_word()
         
@@ -229,61 +229,61 @@ while run:
     
         
     q_button = CreateButton(screen,display)
-    q_button.drawButton('q',posX+400,posY+100,yes_btnW,yes_btnH,color,10)
+    q_button.drawButton('q',posX+400,posY+100,letter_btnW,letter_btnH,color,10)
     q_button.textButton('q', 'black', 'Comic Sans MS', 20, (0,0))
     q_button.comparison_word()
         
 
     r_button = CreateButton(screen,display)
-    r_button.drawButton('r',posX+500,posY+100,yes_btnW,yes_btnH,color,10)
+    r_button.drawButton('r',posX+500,posY+100,letter_btnW,letter_btnH,color,10)
     r_button.textButton('r', 'black', 'Comic Sans MS', 20, (0,0))
     r_button.comparison_word()
     
 
     s_button = CreateButton(screen,display)
-    s_button.drawButton('s',posX,posY+150,yes_btnW,yes_btnH,color,10)
+    s_button.drawButton('s',posX,posY+150,letter_btnW,letter_btnH,color,10)
     s_button.textButton('s', 'black', 'Comic Sans MS', 20, (0,0))
     s_button.comparison_word()
         
 
     t_button = CreateButton(screen,display)
-    t_button.drawButton('t',posX+100,posY+150,yes_btnW,yes_btnH,color,10)
+    t_button.drawButton('t',posX+100,posY+150,letter_btnW,letter_btnH,color,10)
     t_button.textButton('t', 'black', 'Comic Sans MS', 20, (0,0))
     t_button.comparison_word()
         
 
     u_button = CreateButton(screen,display)
-    u_button.drawButton('u',posX+200,posY+150,yes_btnW,yes_btnH,color,10)
+    u_button.drawButton('u',posX+200,posY+150,letter_btnW,letter_btnH,color,10)
     u_button.textButton('u', 'black', 'Comic Sans MS', 20, (0,0))
     u_button.comparison_word()
         
 
     v_button = CreateButton(screen,display)
-    v_button.drawButton('v',posX+300,posY+150,yes_btnW,yes_btnH,color,10)
+    v_button.drawButton('v',posX+300,posY+150,letter_btnW,letter_btnH,color,10)
     v_button.textButton('v', 'black', 'Comic Sans MS', 20, (0,0))
     v_button.comparison_word()
         
 
     w_button = CreateButton(screen,display)
-    w_button.drawButton('w', posX+400,posY+150,yes_btnW,yes_btnH,color,10)
+    w_button.drawButton('w', posX+400,posY+150,letter_btnW,letter_btnH,color,10)
     w_button.textButton('w', 'black', 'Comic Sans MS', 20, (0,0))
     w_button.comparison_word()
         
 
     x_button = CreateButton(screen,display)
-    x_button.drawButton('x', posX+500,posY+150,yes_btnW,yes_btnH,color,10)
+    x_button.drawButton('x', posX+500,posY+150,letter_btnW,letter_btnH,color,10)
     x_button.textButton('x', 'black', 'Comic Sans MS', 20, (0,0))
     x_button.comparison_word()
         
 
     y_button = CreateButton(screen,display)
-    y_button.drawButton('y',posX,posY+200,yes_btnW,yes_btnH,color,10)
+    y_button.drawButton('y',posX,posY+200,letter_btnW,letter_btnH,color,10)
     y_button.textButton('y', 'black', 'Comic Sans MS', 20, (0,0))
     y_button.comparison_word()
         
 
     z_button = CreateButton(screen,display)
-    z_button.drawButton('z',posX+100,posY+200,yes_btnW,yes_btnH,color,10)
+    z_button.drawButton('z',posX+100,posY+200,letter_btnW,letter_btnH,color,10)
     z_button.textButton('z', 'black', 'Comic Sans MS', 20, (0,0))
     z_button.comparison_word()
 
